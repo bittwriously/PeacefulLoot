@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#W#",
+    "WNW",
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:soul_sand"
+    },
+    "W": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "N": {
+      "item": "peaceful_loot:nether_star_dead"
+    }
+  },
+  "result": {
+    "id": "minecraft:nether_star",
+    "count": 1
+  }
+}

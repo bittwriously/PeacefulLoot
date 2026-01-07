@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "peaceful_loot:item/nether_star_shard"
+  }
+}
