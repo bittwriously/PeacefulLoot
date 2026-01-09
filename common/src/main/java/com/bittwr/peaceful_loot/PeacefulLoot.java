@@ -6,7 +6,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Items;
 
 // we inject loot into the table so
@@ -15,24 +15,24 @@ import net.minecraft.world.item.Items;
 public final class PeacefulLoot {
     public static final String MOD_ID = "peaceful_loot";
 
-    private static final ResourceLocation FORTRESS_CHEST = ResourceLocation.fromNamespaceAndPath("minecraft", "chests/nether_bridge"); // rich
+    private static final Identifier FORTRESS_CHEST = Identifier.fromNamespaceAndPath("minecraft", "chests/nether_bridge"); // rich
 
-    private static final ResourceLocation BASTION_BRIDGE_CHEST = ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_bridge"); // noob
-    private static final ResourceLocation BASTION_OTHER_CHEST = ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_other"); // pro
-    private static final ResourceLocation BASTION_STABLE_CHEST = ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_hoglin_stable"); // hacker
-    private static final ResourceLocation BASTION_TREASURE_CHEST = ResourceLocation.fromNamespaceAndPath("minecraft", "chests/bastion_treasure"); // god
+    private static final Identifier BASTION_BRIDGE_CHEST = Identifier.fromNamespaceAndPath("minecraft", "chests/bastion_bridge"); // noob
+    private static final Identifier BASTION_OTHER_CHEST = Identifier.fromNamespaceAndPath("minecraft", "chests/bastion_other"); // pro
+    private static final Identifier BASTION_STABLE_CHEST = Identifier.fromNamespaceAndPath("minecraft", "chests/bastion_hoglin_stable"); // hacker
+    private static final Identifier BASTION_TREASURE_CHEST = Identifier.fromNamespaceAndPath("minecraft", "chests/bastion_treasure"); // god
 
-    private static final ResourceLocation STRONGHOLD_CORRIDOR = ResourceLocation.fromNamespaceAndPath("minecraft", "chests/stronghold_corridor");
+    private static final Identifier STRONGHOLD_CORRIDOR = Identifier.fromNamespaceAndPath("minecraft", "chests/stronghold_corridor");
 
-    private static final ResourceLocation TREASURE_CHEST = ResourceLocation.fromNamespaceAndPath("minecraft", "chests/buried_treasure");
+    private static final Identifier TREASURE_CHEST = Identifier.fromNamespaceAndPath("minecraft", "chests/buried_treasure");
 
-    private static final ResourceLocation END_CHEST = ResourceLocation.fromNamespaceAndPath("minecraft", "chests/end_city_treasure");
+    private static final Identifier END_CHEST = Identifier.fromNamespaceAndPath("minecraft", "chests/end_city_treasure");
 
     public static void init() {
         NetherStarStuff.init();
         LootEvent.MODIFY_LOOT_TABLE.register((lootTableId, tableBuilder, source) -> {
             // add a new loot pool to the existing table
-            final ResourceLocation LootTableId = lootTableId.location();
+            final Identifier LootTableId = lootTableId.identifier();
             LootPool.Builder pool = LootPool.lootPool();
             if (FORTRESS_CHEST.equals(LootTableId)) {
                 pool.setRolls(UniformGenerator.between(1.0f, 3.0f))

@@ -6,9 +6,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "peaceful_loot:nether_star_clump"
-    }
+    "#": "peaceful_loot:nether_star_clump"
   },
   "result": {
     "id": "peaceful_loot:nether_star_fragment",

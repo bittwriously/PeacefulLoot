@@ -6,9 +6,7 @@
     " # "
   ],
   "key": {
-    "#": {
-      "item": "peaceful_loot:nether_star_shard"
-    }
+    "#": "peaceful_loot:nether_star_shard"
   },
   "result": {
     "id": "peaceful_loot:nether_star_dead",

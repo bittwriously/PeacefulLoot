@@ -6,15 +6,9 @@
     "#W#"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:soul_sand"
-    },
-    "W": {
-      "item": "minecraft:wither_skeleton_skull"
-    },
-    "N": {
-      "item": "peaceful_loot:nether_star_dead"
-    }
+    "#": "minecraft:soul_sand",
+    "W": "minecraft:wither_skeleton_skull",
+    "N": "peaceful_loot:nether_star_dead"
   },
   "result": {
     "id": "minecraft:nether_star",
